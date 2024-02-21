@@ -1,0 +1,15 @@
+package org.kh.java;
+
+public class Hello2 {
+
+	public static void main(String[] args) {
+
+		System.out.println("장인범");
+		
+		
+//		CPU : 2진수
+//		권한, 작업 : 8진수
+//		주소 : 16진수
+	}
+
+}
