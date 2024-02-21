@@ -54,7 +54,7 @@ public class Condition4 {
 //		
 //		scan.close();
 		
-		if(((point%10 >= 7 && point%10 <= 9) || (point == 100)) && (point >= 60)) {
+		if((point%10 >= 7 && point%10 <= 9) && (point == 100) && (point >= 60)) {
 			result = "+";
 			if(point>=90) {
 				result = "A" + result;

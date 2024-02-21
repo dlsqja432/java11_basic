@@ -54,7 +54,7 @@ public class Condition4 {
 //		
 //		scan.close();
 		
-		if(((point%10 >= 7 && point%10 <= 9) || (point == 100)) && (point >= 60)) {
+		if((point%10 >= 7 && point%10 <= 9) && (point == 100) && (point >= 60)) {
 			result = "+";
 			if(point>=90) {
 				result = "A" + result;
@@ -119,8 +119,6 @@ public class Condition4 {
 		System.out.println("당신의 점수는 " + point + "점 입니다.");
 		System.out.println("당신의 학점은 " + result + "등급 입니다.");
 		System.out.println(remark + "을 수여하셨습니다.");
-		
-		scan.close();
 	}
 
 }
