@@ -5,6 +5,11 @@ public class Operation7 {
 
 	public static void main(String[] args) {
 
+//		* 연산자 우선순위
+//		단항 연산자가 가장 높고 이항, 삼항 연산자 순서입니다.
+//		대입 연산자의 우선순위가 가장 낮습니다.
+//		산술, 관계, 논리, 대입 연산자 순서로 우선순위를 가지며 ()의 우선순위가 가장 높습니다.
+		
 		int a = 20;
 		int b = 15;
 		int tmp;

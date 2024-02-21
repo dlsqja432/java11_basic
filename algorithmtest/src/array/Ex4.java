@@ -1,38 +1,38 @@
 package array;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
+import java.util.Scanner;
 
 public class Ex4 {
 
-	public static void main(String[] args) throws IOException {
-
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+	public static void main(String[] args) {
 		
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		int num = st.countTokens();
-		
-		int[] arr = new int[num];
-		int max;
+		Scanner scan = new Scanner(System.in);
+		int[] arr = new int[9];
 		int count = 0;
+		int max = 0;
+		int maxNum = 0;
 		
-		for(int i=0; i<num; i++) {
-			arr[i] = Integer.parseInt(st.nextToken());
+		for(int i=0; i<9; i++) {
+			arr[i] = scan.nextInt();
 		}
 		
-		for(int i=0; i<num; i++) {
-			for(int j=i; j<num; j++) {
-				if(arr[j] > arr[j+1]) {
-					max = arr[j];
-					count++;
+		for(int i=0; i<9; i++) {
+			count = 0;
+			for(int j=0; j<9; j++) {
+				if(arr[j] > arr[i]) {
+					continue;
 				}
+				count++;
+			}
+			if(count == 9) {
+				max = i+1;
+				maxNum = arr[i];
 			}
 		}
+		System.out.println(maxNum);
+		System.out.println(max);
+		
+		scan.close();
 	}
 
 }
