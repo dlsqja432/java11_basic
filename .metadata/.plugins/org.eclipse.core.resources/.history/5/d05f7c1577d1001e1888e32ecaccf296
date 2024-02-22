@@ -100,106 +100,26 @@ public class StarPrint {
 		
 		
 		// 8번
-		System.out.println("8번");
-		for(int i=0; i<11; i++) {
-			int space = i;
-			int star = i+1;
-			if(i >= 6) {
-				space = 10-i;
-				star = 11-i;
-			}
-			
-			for(int j=0; j<5-space; j++) {
+		for (int i = 6; i > 0; i--) {
+			for (int j = 1; j < i; j++) {
 				System.out.print(" ");
 			}
-			for(int j=0; j<star; j++) {
+			for (int j = 7; j > i; j--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 0; j < i; j++) {
+				System.out.print(" ");
+			}
+			for (int j = 6; j > i; j--) {
 				System.out.print("*");
 			}
 			System.out.println();
 		}
 		System.out.println();
-		
-		
-		// 9번
-		System.out.println("9번");
-		for(int i=0; i<5; i++) {
-			for(int j=0; j<4-i; j++) {
-				System.out.print(" ");
-			}
-			for(int j=0; j<(2*i+1); j++) {
-				System.out.print("*");
-			}
-			for(int j=0; j<4-i; j++) {
-				System.out.print(" ");
-			}
-			System.out.println();
-		}
-		System.out.println();
-		
-		
-		// 10번
-		System.out.println("10번");
-		for(int i=0; i<5; i++) {
-			for(int j=0; j<i; j++) {
-				System.out.print(" ");
-			}
-			for(int j=0; j<(2*(4-i)+1); j++) {
-				System.out.print("*");
-			}
-			for(int j=0; j<i; j++) {
-				System.out.print(" ");
-			}
-			System.out.println();
-		}
-		System.out.println();
-		
-		
-		// 11번
-		System.out.println("11번");
-		for(int i=0; i<9; i++) {
-			int space = i;
-			int star = i;
-			if(i>=5) {
-				space = 8-i;
-				star = 8-i;
-			}
-			
-			for(int j=0; j<4-space; j++) {
-				System.out.print(" ");
-			}
-			for(int j=0; j<(2*star +1); j++) {
-				System.out.print("*");
-			}
-			for(int j=0; j<4-space; j++) {
-				System.out.print(" ");
-			}
-			System.out.println();
-		}
-		System.out.println();
-		
-		
-		// 12번
-		System.out.println("12번");
-		for(int i=0; i<9; i++) {
-			int space = i;
-			int star = i;
-			if(i>=5) {
-				star = 8-i;
-				space = 8-i;
-			}
-			for(int j=0; j<5-star; j++) {
-				System.out.print("*");
-			}
-			for(int j=0; j<(2*space +1); j++) {
-				System.out.print(" ");
-			}
-			for(int j=0; j<5-star; j++) {
-				System.out.print("*");
-			}
-			System.out.println();
-		}
-		System.out.println();
-	} 
+	}
 }
 
 

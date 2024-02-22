@@ -176,29 +176,6 @@ public class StarPrint {
 			System.out.println();
 		}
 		System.out.println();
-		
-		
-		// 12번
-		System.out.println("12번");
-		for(int i=0; i<9; i++) {
-			int space = i;
-			int star = i;
-			if(i>=5) {
-				star = 8-i;
-				space = 8-i;
-			}
-			for(int j=0; j<5-star; j++) {
-				System.out.print("*");
-			}
-			for(int j=0; j<(2*space +1); j++) {
-				System.out.print(" ");
-			}
-			for(int j=0; j<5-star; j++) {
-				System.out.print("*");
-			}
-			System.out.println();
-		}
-		System.out.println();
 	} 
 }
 

@@ -184,7 +184,7 @@ public class StarPrint {
 			int space = i;
 			int star = i;
 			if(i>=5) {
-				star = 8-i;
+				star = 7-i;
 				space = 8-i;
 			}
 			for(int j=0; j<5-star; j++) {
@@ -196,9 +196,7 @@ public class StarPrint {
 			for(int j=0; j<5-star; j++) {
 				System.out.print("*");
 			}
-			System.out.println();
 		}
-		System.out.println();
 	} 
 }
 

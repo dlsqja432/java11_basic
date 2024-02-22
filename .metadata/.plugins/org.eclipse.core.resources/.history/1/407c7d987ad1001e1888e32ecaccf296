@@ -13,20 +13,22 @@ public class Ex3 {
 		for(int i=0; i<a; i++) {
 			int space = i;
 			int star = i;
-			if(i>=n) {
-				space = a-i-1;
-				star = a-i-1;
+			if(i>=5) {
+				space = 8-i;
+				star = 8-i;
 			}
 			
-			for(int j=0; j<n-1-space; j++) {
+			for(int j=0; j<4-space; j++) {
 				System.out.print(" ");
 			}
 			for(int j=0; j<(2*star +1); j++) {
 				System.out.print("*");
 			}
+			for(int j=0; j<4-space; j++) {
+				System.out.print(" ");
+			}
 			System.out.println();
 		}
-		scan.close();
 	}
 
 }
