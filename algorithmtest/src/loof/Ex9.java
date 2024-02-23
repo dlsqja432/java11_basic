@@ -21,8 +21,6 @@ public class Ex9 {
 			}
 		}
 		
-		int b = Integer.parseInt(br.readLine());
-		int sum = 0;
 		
 	}
 
