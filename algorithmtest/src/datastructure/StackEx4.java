@@ -22,9 +22,6 @@ public class StackEx4 {
 			arr[n-i-1] = Integer.parseInt(st.nextToken());
 		}
 		
-		for(int i=0; i<n; i++) {
-			line1.push()
-		}
 	}
 
 }

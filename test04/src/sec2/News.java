@@ -48,4 +48,4 @@ public class News {
 				+ resdate + ", visited=" + visited + "]";
 	}
 	
-}
+} 
