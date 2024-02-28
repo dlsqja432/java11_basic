@@ -12,7 +12,7 @@ public class Mammal extends Animal { // Animal 로 부터 모든  멤버를 상�
 	}
 
 	public void print() {
-		System.out.println("Mammal leg=" + leg + "]");
+		System.out.println("Mammal leg = " + "["+ leg + "], " + "name = [" + super.getName() + "]");
 	}
 	
 }

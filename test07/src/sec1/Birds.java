@@ -19,4 +19,8 @@ public class Birds extends Animal {
 	public void setFly(boolean fly) {
 		this.fly = fly;
 	}
+	
+	public void print() {
+		System.out.println(wings + ", " + super.getName());
+	}
 }

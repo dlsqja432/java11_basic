@@ -8,6 +8,7 @@ public class BankExam {
 		Scanner scan = new Scanner(System.in);
 		Account[] account = new Account[10];
 		int count = 0;
+		int tmp = -1;
 		
 		while(true) {
 			System.out.println("처리하고 싶은 작업의 번호를 골라주세요.");
@@ -18,7 +19,7 @@ public class BankExam {
 				break;
 			}
 			if(a == 1) {
-				System.out.println("계좌를 등록하겠습니다.");
+				System.out.println("계좌를 등록하겠습니다."); 
 				account[count] = new Account();
 				System.out.print("은행명 : ");
 				account[count].setBankName(scan.next());
@@ -31,7 +32,7 @@ public class BankExam {
 				count++;
 			}
 			if(a == 2) {
-				System.out.println("입금하실 계좌번호를 입력해주세요.");
+				System.out.println("입금하실 계좌번호를 입력해주세요. ");
 				int b = scan.nextInt();
 				for(int i=0; i<count; i++) {
 					if(account[i].getAccountNumber() == b) {
@@ -39,8 +40,12 @@ public class BankExam {
 						account[i].inMoney(scan.nextInt());
 						break;
 					}
+					tmp = i;
 				}
-				System.out.println("계좌번호를 찾지 못했습니다. 작업을 다시 선택해주세요.");
+				if(tmp == count-1) {
+					System.out.println("계좌번호를 찾지 못했습니다. 작업을 다시 선택해주세요.");
+				}
+				tmp = -1;
 			}
 			if(a == 3) {
 				System.out.println("출금하실 계좌번호를 입력해주세요.");
@@ -51,8 +56,12 @@ public class BankExam {
 						account[i].outMoney(scan.nextInt());
 						break;
 					}
+					tmp = i;
 				}
-				System.out.println("계좌번호를 찾지 못했습니다. 작업을 다시 선택해주세요.");
+				if(tmp == count-1) {
+					System.out.println("계좌번호를 찾지 못했습니다. 작업을 다시 선택해주세요.");
+				}
+				tmp = -1;
 			}
 			if(a == 4) {
 				System.out.println("잔액 조회하실 계좌번호를 입력해주세요.");
@@ -63,8 +72,12 @@ public class BankExam {
 						account[i].showInfo();
 						break;
 					}
+					tmp = i;
 				}
-				System.out.println("계좌번호를 찾지 못했습니다. 작업을 다시 선택해주세요.");
+				if(tmp == count-1) {
+					System.out.println("계좌번호를 찾지 못했습니다. 작업을 다시 선택해주세요.");
+				}
+				tmp = -1;
 			}
 			System.out.println("=========================================================================");
 		}
