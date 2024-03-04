@@ -20,3 +20,4 @@ public class Student {
 		System.out.printf(", 평균 : %.2f", avg());
 	}
 }
+
