@@ -12,8 +12,10 @@ public class GenericExam {
 		t.setField1(b);
 		
 		Generic1<Integer> i = new Generic1<>();
+		i.setField1(1004);
 		
-		Generic1<String> str = new Generic1<>();		
+		Generic1<String> str = new Generic1<>();
+		str.setField1("범인장");
 	}
 
 }
