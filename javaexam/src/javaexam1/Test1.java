@@ -16,8 +16,8 @@ public class Test1 {
 		ipInfoList.add(new IPInfo("123.123.123.123", "홍길동"));
 //		IPInfo 클래스에서 매개변수 하나를 전달 받는 생성자(Constructor)는 없으므로 객체 생성 불가 
 //		방법1) IPInfo 클래스에 매개변수 ip만 받는 생성자를 추가한다.
-//		ipInfoList.add(new IPInfo("212.133.7.8", "장인범"));	
 //		방법2) IPInfo 객체 생성시 ip와 user의 매개변수 값을 모두 넣는다.
+//		ipInfoList.add(new IPInfo("212.133.7.8", "장인범"));	
 		ipInfoList.add(new IPInfo("177.233.111.222", "고길순"));
 
 		System.out.print("ip 입력 : ");
