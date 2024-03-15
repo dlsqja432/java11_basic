@@ -9,7 +9,7 @@ public class Test1 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-//		ipInfoList는 ArrayList로 생성해야 하지만, null로 대입하였으므로 
+//		ipInfoList는 ArrayList로 생성해야 하지만, null로 대입하였으므로 ipInfoList에 요소를 추가하는
 //		13~15 문장은 NullPointerException이 발생한다.
 //		List<IPInfo> ipInfoList = new ArrayList<>(); 로 바꿔줘야함
 		List<IPInfo> ipInfoList = new ArrayList<>();

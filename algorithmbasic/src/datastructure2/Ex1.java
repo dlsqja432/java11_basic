@@ -1,44 +1,56 @@
 package datastructure2;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
+import java.util.Scanner;
+import java.util.Stack;
 
 public class Ex1 {
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		String str = br.readLine();
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
 		str = reverseString(str);
-		bw.write(str);
-		bw.flush();
+		System.out.println(str);
 	}
 	
-	public static String reverseString(String str) {
-		StringTokenizer st = new StringTokenizer(str);
+	public static String reverseString(String s) {
 		StringBuilder sb = new StringBuilder();
-		while(st.hasMoreTokens()) {
-			String s = st.nextToken();
-			if(s.charAt(0) == '<') {
-				for(int i=0; i<s.length(); i++) {
-					sb.append(s.charAt(i));
+		Stack<Character> stack = new Stack<>();
+		int index = 0;
+		while(index != s.length()) {
+			if(s.charAt(index) == '<') {
+				if(!stack.isEmpty()) {
+					while(!stack.isEmpty()) {
+						sb.append(stack.pop());
+					}
 				}
-			}
-			else if(s.charAt(s.length()-1) == '>')  {
-				for(int i=0; i<s.length(); i++) {
-					sb.append(s.charAt(i));
+				while(s.charAt(index) != '>') {
+					sb.append(s.charAt(index));
+					index++;
 				}
+				sb.append(s.charAt(index));
+				index++;
 			}
+			
 			else {
-				for(int i=s.length()-1; i>=0; i--) {
-					sb.append(s.charAt(i));
+				if(s.charAt(index) == ' ') {
+					if(!stack.isEmpty()) {
+						while(!stack.isEmpty()) {
+							sb.append(stack.pop());
+						}
+					}
+					sb.append(" ");
 				}
+				else {
+					stack.add(s.charAt(index));
+				}
+				index++;
 			}
-			sb.append(" ");
+		}
+		if(!stack.isEmpty()) {
+			while(!stack.isEmpty()) {
+				sb.append(stack.pop());
+			}
 		}
 		return sb.toString();
 	}
