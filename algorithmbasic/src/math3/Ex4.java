@@ -3,7 +3,7 @@ package math3;
 import java.util.Scanner;
 
 public class Ex4 {
-	static final int MAX = 1000000;
+	static final int MAX = 10000000;
 	static boolean[] prime = new boolean[MAX+1];
 	
 	public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class Ex4 {
 		int n = sc.nextInt();
 		int tmp = n;
 		getPrime();
-		
+		 
 		while(n!=1) {
 			if(n%2==0) {
 				n /= 2;
@@ -29,6 +29,10 @@ public class Ex4 {
 	}
 	
 	public static void getPrime() {
+		for(int i=2; i<=MAX; i++) {
+			prime[i] = true;
+		}
+		
 		for(int i=2; i*i<=MAX; i++) {
 			if(prime[i]) {
 				for(int j=i*i; j<=MAX; j+=i) {
