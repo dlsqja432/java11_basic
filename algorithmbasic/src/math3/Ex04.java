@@ -2,7 +2,7 @@ package math3;
 
 import java.util.Scanner;
 
-public class Ex4 {
+public class Ex04 {
 	static final int MAX = 10000000;
 	static boolean[] prime = new boolean[MAX+1];
 	

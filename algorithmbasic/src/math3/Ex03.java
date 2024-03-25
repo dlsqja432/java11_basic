@@ -3,7 +3,7 @@ package math3;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Ex3 {
+public class Ex03 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
